@@ -7,10 +7,21 @@ local M = {}
 M.base46 = {
 	theme = "onedark",
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	hl_override = {
+    Type = { italic = true },
+    SpecialComment = { italic = true },
+    TSAttribute = { italic = true },
+    TSParameter = { italic = true },
+    TSLabel = { italic = true },
+    TSVariableBuiltin = { italic = true },
+    TSTagAttribute = { italic = true },
+    Function = { italic = true },
+    Comment = { italic = true },
+	},
+
+  tabufline = {
+    enabled = false,
+  },
 }
 
 return M
