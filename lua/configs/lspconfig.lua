@@ -7,7 +7,7 @@ local lspconfig = require "lspconfig"
 local servers = { "html", "cssls",
   "gopls", "ccls", "pyright", "jsonls", "csharp_ls", "yamlls", "bashls",
   "flow", "zls", "ocamllsp",
-  "tsserver",
+  "ts_ls",
 }
 
 -- lsps with default config
@@ -36,13 +36,6 @@ for _, lsp in ipairs(servers) do
 
   lspconfig[lsp].setup(setup)
 end
-
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
 
 -- gopls
 -- enable inlay hints
